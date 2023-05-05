@@ -1,6 +1,17 @@
 {
+  "name": "jsdoc-typescript-example",
   "scripts": {
     "check": "tsc -p tsconfig.json"
+  },
+  "exports": {
+    ".": {
+      "import": "index.mjs",
+      "require": ""
+    },
+    "./*": {
+      "import": "./lib/*.mjs",
+      "require": ""
+    }
   },
   "devDependencies": {
     "@types/node": "^18.16.3",
